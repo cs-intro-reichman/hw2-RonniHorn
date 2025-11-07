@@ -24,7 +24,7 @@ public class Cheers {
                         j++;
                 }
                 if(j == an.length() && didPrint == false)
-                        System.out.println("Give me a " + name.charAt(i) + ": " + name.charAt(i) + "!" );
+                        System.out.println("Give me a  " + name.charAt(i) + ": " + name.charAt(i) + "!" );
 
             }
         System.out.println("What does that spell?");
