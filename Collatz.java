@@ -12,7 +12,7 @@ public class Collatz {
 				currentSeed = i;
 				System.out.print(currentSeed + " ");
 				actions = 1;
-				while (currentSeed != 1 || i == 1){
+				while (currentSeed != 1){
 					actions++;
 					if(currentSeed%2 == 0){
 						currentSeed = currentSeed/2;
