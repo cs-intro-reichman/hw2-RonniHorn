@@ -5,14 +5,16 @@ public class Collatz {
 		String mode = args[1];
 		int actions = 0;
 		int currentSeed = seed; // the seed we are making actions on
+		boolean loop = true;
 		if(mode.equals("v"))
 		{
 			for(int i = 1; i<=seed; i++)
 			{
+				loop = true;
 				currentSeed = i;
 				System.out.print(currentSeed + " ");
-				actions = 1;
-				while (currentSeed != 1){
+				actions = 1; 
+				while (loop){
 					actions++;
 					if(currentSeed%2 == 0){
 						currentSeed = currentSeed/2;
@@ -22,6 +24,10 @@ public class Collatz {
 						currentSeed = (currentSeed * 3) + 1;
 					}
 					System.out.print(currentSeed + " ");
+					if(currentSeed == 1)
+					{
+						loop = false;
+					}
 				}
 				System.out.println("(" + actions + ")");
 					
